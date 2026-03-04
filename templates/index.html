@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emotion Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Emotion Sentiment Analyzer</h2>
+
+<textarea id="text" rows="4" cols="40" placeholder="Type text..."></textarea>
+
+<br><br>
+
+<button onclick="predict()">Analyze</button>
+
+<h3 id="result"></h3>
+
+<!-- load external script; actual logic lives in static/script.js -->
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
